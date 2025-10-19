@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
 
             // Replace with your deployed Google Apps Script URL
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbxBet15w13cDHrSUTIxtngnDwIILcy2IVuCoDkDlnFwHXfjwKjn627a3nUXVMy_sh5L/exec';
+            const scriptUrl = 'https://script.google.com/macros/library/d/1ndNRBCtM0Wk26SclbHBO_XyHRQCyDnXfYv-q8M3s9wwr6tFeINz_NqvY/2';
             
             fetch(scriptUrl, {
                 method: 'POST',
