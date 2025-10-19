@@ -83,41 +83,67 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(storyTimeline);
     }
 
-    // RSVP Form Handling (Netlify Forms)
-    const rsvpForm = document.querySelector('form[name="rsvp"]');
+    // RSVP Form Handling (Formspree)
+    const rsvpForm = document.querySelector('.rsvp-form');
     if (rsvpForm) {
         rsvpForm.addEventListener('submit', function(e) {
-            // Let Netlify handle the form submission
-            // Just show a loading state
+            e.preventDefault();
+            
             const submitBtn = this.querySelector('.rsvp-btn');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
             
-            // Basic validation before submission
+            // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
+            // Basic validation
             if (!data.name || !data.email || !data.phone || !data.attendance) {
-                e.preventDefault();
                 showNotification('Please fill in all required fields.', 'error');
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
                 return;
             }
 
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
-                e.preventDefault();
                 showNotification('Please enter a valid email address.', 'error');
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+                return;
+            }
+
+            // Phone validation
+            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+            if (!phoneRegex.test(data.phone)) {
+                showNotification('Please enter a valid phone number.', 'error');
                 return;
             }
             
-            // If validation passes, let Netlify handle the submission
-            // The form will redirect to a success page or show Netlify's default message
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Submit to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
+                    this.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Error submitting RSVP. Please try again.', 'error');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 
