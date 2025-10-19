@@ -1,0 +1,31 @@
+
+WEDDING INVITATION SCRAPE SUMMARY
+=================================
+
+URL: https://www.wedmegood.com/invite/gv/S-P/2153071
+Scraped on: 2025-10-19 07:46:22
+
+TITLE: S P Wedding Invite
+
+COUPLE NAMES:
+
+
+EVENT DETAILS:
+
+
+DATE/TIME: 
+
+VENUE INFORMATION:
+
+
+IMAGES DOWNLOADED: 16
+
+TOTAL TEXT CONTENT LINES: 233
+
+FILES CREATED:
+- raw_page.html (Original HTML)
+- data/content.json (Structured text content)
+- data/images.json (Image information)
+- data/metadata.json (Page metadata)
+- images/ (Downloaded images)
+- summary.txt (This file)

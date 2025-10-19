@@ -1,0 +1,34 @@
+
+ENHANCED WEDDING INVITATION SCRAPE SUMMARY
+=========================================
+
+URL: https://www.wedmegood.com/invite/gv/S-P/2153071
+Scraped on: 2025-10-19 07:47:45
+Method: Requests (Static HTML)
+
+WEDDING DETAILS EXTRACTED:
+=========================
+
+Bride's Name: Star
+Groom's Name: Above
+Wedding Date: 
+Venue: s Vendors Photos Real Weddings Blog E-Invites Genie Log In By Type Banquet Halls Marriage Garden / Lawns Wedding Resorts Small Function / Party Halls Destination Wedding Venues Kalyana Mandapams 4 Star & Above Wedding Hotels Wedding Farmhouses View all Venues By City Mumbai Bangalore Pune Kolkata Jaipur Lucknow Hyderabad More Destination Wedding Venues Goa Jaipur Udaipur Jodhpur Thailand Jim Corbett Photographers Photographers Makeup Bridal Makeup Artists Family Makeup Planning & Decor Wedding Planners Decorators Virtual Planning Virtual planning Mehndi Mehendi Artists Music & Dance DJs Sangeet Choreographer Wedding Entertainment Invites & Gifts Invitations Favors Trousseau Packers Invitation Gifts Mehndi Favors View All Invites & Gifts Food Catering Services Cake Chaat & Food Stalls Bartenders View All Food Pre Wedding Shoot Pre Wedding Shoot Locations Pre Wedding Photographers Bridal Wear Bridal Lehengas Kanjeevaram / Silk Sarees Cocktail Gowns Trousseau Sarees Bridal Lehenga on Rent View All Bridal Wear Groom Wear Sherwani Wedding Suits / Tuxes Sherwani On Rent View All Groom Wear Jewellery & Accessories Jewellery Flower Jewellery Bridal Jewellery on Rent Accessories View All Jewellery & Accessories Pandits Wedding Pandits Bridal Grooming Beauty and Wellness Outfit Bridal Lehenga Wedding Sarees Engagement Mehndi Blouse Designs More Jewellery & Accessories Bridal Jewellery Engagement Rings Floral Jewellery More Mehndi Arabic Mehndi Designs Simple Unique More Decor & Ideas Wedding Decor Bridal Entry Groom Entry Wedding Games More Wedding Card Designs Designs Wedding Gifts Wedding Invitations More Wedding Photography Pre Wedding Shoot Wedding Wedding Photoshoot & Poses More Groom Wear Sherwani for Groom Wedding Suits for Groom More Bridal Makeup & Hair Bridal Makeup Bridal Hairstyles Engagement Mehndi More By City Mumbai Bangalore Pune Kolkata Jaipur Others By Culture Maharashtrian Punjabi /Sikh Bengali Gujarati Marwari Telugu Others By Theme Destination Grand & Luxurious Pocket Friendly Stunners Intimate & Minimalist Modern & Stylish International Others Latest Real Weddings Aditi and Jan-Philipp Wagner ( Delhi NCR ) Debosmita and Sumeet ( Visakhapatnam (Vizag) ) Browse by Category Bridal Makeup Honeymoon Travel Wedding Songs and Videos Bridal Hairstyles Wedding Decor Ideas Bridal Style Advice Wedding Gifts and Favors Budget Weddings More Popular Sections South Indian wedding Real Brides Reveal Bridal Buys Real Wedding Mehendi Ideas Indian Wedding Ideas Most Searched Blogs Wedding Songs Best Bridal Entry Songs Chandni Chowk Lehengas Best Bridal Hairstyles Bridal Mehendi Designs Best Groom Entry Songs Wittiest Wedding Hashtags 2025 Marriage Dates Latest Sabyasachi Lehengas Bridal Blouse Designs Top Blogs Bridal Mehendi Designs Honeymoon Hotels Bridal Wear By Type Bridal Lehenga Lehenga Sarees Gowns Sharara Anarkali Drape Sarees Indo Western View More Bridal Wear By Occasion Engagement Haldi Mehendi Cocktail Wedding Reception Sangeet Bridal Wear Most Popular Engagement lehenga Cocktail Gowns Reception Lehenga Wedding Sarees Lehenga Drape Sarees Silk Sarees Banarasi Lehenga Red Bridal Lehenga View More Wedding Invitation Maker Wedding Card Designs Invitation Video Templates Save the Date Templates RSVP Comments Navigate
+Venue Address: 
+Ceremony Time: 
+Reception Time: 
+
+IMAGES DOWNLOADED: 12
+Total Image Size: 3.85 MB
+
+FILES CREATED:
+- enhanced_raw_page.html (JavaScript-rendered HTML)
+- data/wedding_details.json (Extracted wedding information)
+- data/enhanced_images.json (Image information)
+- images/ (Downloaded wedding images)
+- enhanced_summary.txt (This file)
+
+EXTRACTION NOTES:
+- This scraper attempts to extract wedding-specific information
+- If content is dynamically loaded, Selenium is used for JavaScript rendering
+- Pattern matching is used to identify names, dates, venues, and times
+- Large images are prioritized over small icons/logos

@@ -1,0 +1,767 @@
+{
+  "url": "https://www.wedmegood.com/invite/gv/S-P/2153071",
+  "scraped_at": "2025-10-19T07:46:22.561880",
+  "meta_tags": {
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+    "google-site-verification": "nq_1Rdso9b1o3EfBtFa_pGMiTzxftr67g7BQNfGvZ70",
+    "facebook-domain-verification": "akqnzc6nx4jui86lnx5fgk6ek5mqjg",
+    "fb:app_id": "400046146843075",
+    "theme-color": "#e72e77",
+    "description": "Wedding invite for S P wedding.",
+    "og:title": "S P Wedding Invite",
+    "al:android:url": "sharesample://story/1234",
+    "al:android:package": "com.wedmegood.planner",
+    "al:android:app_name": "WedMeGood",
+    "og:type": "website"
+  },
+  "links": [
+    {
+      "url": "/write-a-review",
+      "text": "Write A Review"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/",
+      "text": "Venues"
+    },
+    {
+      "url": "/vendors/all/",
+      "text": "Vendors"
+    },
+    {
+      "url": "/photos",
+      "text": "Photos"
+    },
+    {
+      "url": "/real_wedding",
+      "text": "Real Weddings"
+    },
+    {
+      "url": "/blog",
+      "text": "Blog"
+    },
+    {
+      "url": "/wedding-invitations",
+      "text": "E-Invites"
+    },
+    {
+      "url": "/genie",
+      "text": "Genie"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/banquet-hall/",
+      "text": "Banquet Halls"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/marriage-garden-lawns/",
+      "text": "Marriage Garden / Lawns"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/wedding-resorts/",
+      "text": "Wedding Resorts"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/small-function-halls/",
+      "text": "Small Function / Party Halls"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/destination-wedding-venues/",
+      "text": "Destination Wedding Venues"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/kalyana-mandapams/",
+      "text": "Kalyana Mandapams"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/wedding-hotels/",
+      "text": "4 Star & Above Wedding Hotels"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/all/wedding-farmhouses/",
+      "text": "Wedding Farmhouses"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/",
+      "text": "View all Venues"
+    },
+    {
+      "url": "/vendors/mumbai/wedding-venues/",
+      "text": "Mumbai"
+    },
+    {
+      "url": "/vendors/bangalore/wedding-venues/",
+      "text": "Bangalore"
+    },
+    {
+      "url": "/vendors/pune/wedding-venues/",
+      "text": "Pune"
+    },
+    {
+      "url": "/vendors/kolkata/wedding-venues/",
+      "text": "Kolkata"
+    },
+    {
+      "url": "/vendors/jaipur/wedding-venues/",
+      "text": "Jaipur"
+    },
+    {
+      "url": "/vendors/lucknow/wedding-venues/",
+      "text": "Lucknow"
+    },
+    {
+      "url": "/vendors/hyderabad/wedding-venues/",
+      "text": "Hyderabad"
+    },
+    {
+      "url": "/vendors/all/wedding-venues/",
+      "text": "More"
+    },
+    {
+      "url": "/vendors/goa/wedding-venues/",
+      "text": "Goa"
+    },
+    {
+      "url": "/vendors/jaipur/wedding-venues/",
+      "text": "Jaipur"
+    },
+    {
+      "url": "/vendors/udaipur/wedding-venues/",
+      "text": "Udaipur"
+    },
+    {
+      "url": "/vendors/jodhpur/wedding-venues/",
+      "text": "Jodhpur"
+    },
+    {
+      "url": "/vendors/thailand/wedding-venues/",
+      "text": "Thailand"
+    },
+    {
+      "url": "/vendors/jim-corbett/wedding-venues/",
+      "text": "Jim Corbett"
+    },
+    {
+      "url": "/vendors/all/wedding-photographers/",
+      "text": "Photographers"
+    },
+    {
+      "url": "/vendors/all/bridal-makeup/",
+      "text": "Bridal Makeup Artists"
+    },
+    {
+      "url": "/vendors/all/family-makeup/",
+      "text": "Family Makeup"
+    },
+    {
+      "url": "/vendors/all/wedding-planners/",
+      "text": "Wedding Planners"
+    },
+    {
+      "url": "/vendors/all/wedding-decorators/",
+      "text": "Decorators"
+    },
+    {
+      "url": "/genie",
+      "text": "Virtual planning"
+    },
+    {
+      "url": "/vendors/all/mehendi-artists/",
+      "text": "Mehendi Artists"
+    },
+    {
+      "url": "/vendors/all/djs/",
+      "text": "DJs"
+    },
+    {
+      "url": "/vendors/all/sangeet-choreographers/",
+      "text": "Sangeet Choreographer"
+    },
+    {
+      "url": "/vendors/all/wedding-entertainment/",
+      "text": "Wedding Entertainment"
+    },
+    {
+      "url": "/vendors/all/wedding-cards/",
+      "text": "Invitations"
+    },
+    {
+      "url": "/vendors/all/wedding-favors/",
+      "text": "Favors"
+    },
+    {
+      "url": "/vendors/all/trousseau-packers/",
+      "text": "Trousseau Packers"
+    },
+    {
+      "url": "/vendors/all/wedding-favors/all/wedding-invitation-gifts/",
+      "text": "Invitation Gifts"
+    },
+    {
+      "url": "/vendors/all/wedding-favors/all/mehndi-favors/",
+      "text": "Mehndi Favors"
+    },
+    {
+      "url": "/vendors/all/wedding-cards/",
+      "text": "View All Invites & Gifts"
+    },
+    {
+      "url": "/vendors/all/wedding-catering/",
+      "text": "Catering Services"
+    },
+    {
+      "url": "/vendors/all/wedding-cakes/",
+      "text": "Cake"
+    },
+    {
+      "url": "/vendors/all/wedding-catering/all/chaat-food-stalls/",
+      "text": "Chaat & Food Stalls"
+    },
+    {
+      "url": "/vendors/all/bartenders-wedding/",
+      "text": "Bartenders"
+    },
+    {
+      "url": "/vendors/all/wedding-catering/",
+      "text": "View All Food"
+    },
+    {
+      "url": "/vendors/all/pre-wedding-shoot-locations/",
+      "text": "Pre Wedding Shoot Locations"
+    },
+    {
+      "url": "/vendors/all/pre-wedding-shoot/",
+      "text": "Pre Wedding Photographers"
+    },
+    {
+      "url": "/vendors/all/bridal-wear/all/bridal-lehenga-stores/",
+      "text": "Bridal Lehengas"
+    },
+    {
+      "url": "/vendors/all/bridal-wear/all/kanjeevaram-sarees-stores/",
+      "text": "Kanjeevaram / Silk Sarees"
+    },
+    {
+      "url": "/vendors/all/bridal-wear/all/wedding-gowns-shopping/",
+      "text": "Cocktail Gowns"
+    },
+    {
+      "url": "/vendors/all/bridal-wear/all/wedding-sarees-kanjeevarams/",
+      "text": "Trousseau Sarees"
+    },
+    {
+      "url": "/vendors/all/bridal-wear/all/wedding-dress-rentals/",
+      "text": "Bridal Lehenga on Rent"
+    },
+    {
+      "url": "/vendors/all/bridal-wear/",
+      "text": "View All Bridal Wear"
+    },
+    {
+      "url": "/vendors/all/groom-wear/all/sherwani-for-groom/",
+      "text": "Sherwani"
+    },
+    {
+      "url": "/vendors/all/groom-wear/all/wedding-suits-tuxes/",
+      "text": "Wedding Suits / Tuxes"
+    },
+    {
+      "url": "/vendors/all/groom-wear/all/sherwani-on-rent/",
+      "text": "Sherwani On Rent"
+    },
+    {
+      "url": "/vendors/all/groom-wear/",
+      "text": "View All Groom Wear"
+    },
+    {
+      "url": "/vendors/all/wedding-jewellery/",
+      "text": "Jewellery"
+    },
+    {
+      "url": "/vendors/all/wedding-jewellery/all/flower-jewellery/",
+      "text": "Flower Jewellery"
+    },
+    {
+      "url": "/vendors/all/wedding-jewellery/all/bridal-jewellery-on-rent/",
+      "text": "Bridal Jewellery on Rent"
+    },
+    {
+      "url": "/vendors/all/wedding-accessories/",
+      "text": "Accessories"
+    },
+    {
+      "url": "/vendors/all/wedding-jewellery/",
+      "text": "View All Jewellery & Accessories"
+    },
+    {
+      "url": "/vendors/all/wedding-pandits-priests/",
+      "text": "Wedding Pandits"
+    },
+    {
+      "url": "/vendors/all/beauty-and-wellness/",
+      "text": "Beauty and Wellness"
+    },
+    {
+      "url": "/photos/bridal-lehenga",
+      "text": "Bridal Lehenga"
+    },
+    {
+      "url": "/photos/wedding-sarees",
+      "text": "Wedding Sarees"
+    },
+    {
+      "url": "/photos/engagement-dresses",
+      "text": "Engagement"
+    },
+    {
+      "url": "/photos/bridal-mehndi-dresses",
+      "text": "Mehndi"
+    },
+    {
+      "url": "/photos/blouse-designs",
+      "text": "Blouse Designs"
+    },
+    {
+      "url": "/photos/wedding-dresses",
+      "text": "More"
+    },
+    {
+      "url": "/photos/bridal-jewellery",
+      "text": "Bridal Jewellery"
+    },
+    {
+      "url": "/photos/engagement-rings",
+      "text": "Engagement Rings"
+    },
+    {
+      "url": "/photos/floral-jewellery-designs",
+      "text": "Floral Jewellery"
+    },
+    {
+      "url": "/photos/wedding-jewellery",
+      "text": "More"
+    },
+    {
+      "url": "/photos/arabic-mehndi-designs",
+      "text": "Arabic"
+    },
+    {
+      "url": "/photos/mehndi-designs",
+      "text": "Mehndi Designs"
+    },
+    {
+      "url": "/photos/simple-mehndi-designs",
+      "text": "Simple"
+    },
+    {
+      "url": "/photos/unique-mehndi-designs",
+      "text": "Unique"
+    },
+    {
+      "url": "/photos/mehndi-designs",
+      "text": "More"
+    },
+    {
+      "url": "/photos/wedding-decoration-ideas",
+      "text": "Wedding Decor"
+    },
+    {
+      "url": "/photos/bridal-entry-ideas",
+      "text": "Bridal Entry"
+    },
+    {
+      "url": "/photos/groom-entry-ideas",
+      "text": "Groom Entry"
+    },
+    {
+      "url": "/photos/wedding-games-ideas",
+      "text": "Wedding Games"
+    },
+    {
+      "url": "/photos/wedding-decoration-ideas",
+      "text": "More"
+    },
+    {
+      "url": "/photos/wedding-card-designs",
+      "text": "Designs"
+    },
+    {
+      "url": "/photos/wedding-gifts-packing",
+      "text": "Wedding Gifts"
+    },
+    {
+      "url": "/photos/wedding-invitations",
+      "text": "Wedding Invitations"
+    },
+    {
+      "url": "/photos/wedding-invitations",
+      "text": "More"
+    },
+    {
+      "url": "/photos/pre-wedding-shoot-ideas",
+      "text": "Pre Wedding Shoot"
+    },
+    {
+      "url": "/photos/indian-wedding-photos",
+      "text": "Wedding"
+    },
+    {
+      "url": "/photos/wedding-photoshoot-poses",
+      "text": "Wedding Photoshoot & Poses"
+    },
+    {
+      "url": "/photos/wedding-photoshoot-poses",
+      "text": "More"
+    },
+    {
+      "url": "/photos/sherwani-for-groom",
+      "text": "Sherwani for Groom"
+    },
+    {
+      "url": "/photos/wedding-suits-for-groom",
+      "text": "Wedding Suits for Groom"
+    },
+    {
+      "url": "/photos/groom-wedding-dresses",
+      "text": "More"
+    },
+    {
+      "url": "/photos/bridal-makeup-images",
+      "text": "Bridal Makeup"
+    },
+    {
+      "url": "/photos/bridal-hairstyles",
+      "text": "Bridal Hairstyles"
+    },
+    {
+      "url": "/photos/engagement-hairstyles",
+      "text": "Engagement"
+    },
+    {
+      "url": "/photos/hairstyles-for-mehndi",
+      "text": "Mehndi"
+    },
+    {
+      "url": "/photos/wedding-makeup",
+      "text": "More"
+    },
+    {
+      "url": "/real_wedding/mumbai/",
+      "text": "Mumbai"
+    },
+    {
+      "url": "/real_wedding/bangalore/",
+      "text": "Bangalore"
+    },
+    {
+      "url": "/real_wedding/pune/",
+      "text": "Pune"
+    },
+    {
+      "url": "/real_wedding/kolkata/",
+      "text": "Kolkata"
+    },
+    {
+      "url": "/real_wedding/jaipur/",
+      "text": "Jaipur"
+    },
+    {
+      "url": "/real_wedding/",
+      "text": "Others"
+    },
+    {
+      "url": "/real_wedding/all/maharashtrian/",
+      "text": "Maharashtrian"
+    },
+    {
+      "url": "/real_wedding/all/punjabi-sikh/",
+      "text": "Punjabi /Sikh"
+    },
+    {
+      "url": "/real_wedding/all/bengali/",
+      "text": "Bengali"
+    },
+    {
+      "url": "/real_wedding/all/gujarati/",
+      "text": "Gujarati"
+    },
+    {
+      "url": "/real_wedding/all/marwari/",
+      "text": "Marwari"
+    },
+    {
+      "url": "/real_wedding/all/telugu/",
+      "text": "Telugu"
+    },
+    {
+      "url": "/real_wedding/",
+      "text": "Others"
+    },
+    {
+      "url": "/real_wedding/all/all/destination-weddings",
+      "text": "Destination"
+    },
+    {
+      "url": "/real_wedding/all/all/grand-luxurious-weddings",
+      "text": "Grand & Luxurious"
+    },
+    {
+      "url": "/real_wedding/all/all/pocket-friendly-stunners-weddings",
+      "text": "Pocket Friendly Stunners"
+    },
+    {
+      "url": "/real_wedding/all/all/intimate-minimalist-weddings",
+      "text": "Intimate & Minimalist"
+    },
+    {
+      "url": "/real_wedding/all/all/modern-stylish-weddings",
+      "text": "Modern & Stylish"
+    },
+    {
+      "url": "/real_wedding/all/all/international-weddings",
+      "text": "International"
+    },
+    {
+      "url": "/real_wedding/",
+      "text": "Others"
+    },
+    {
+      "url": "/real_wedding/detail/aditi-and-janphilipp-wagner-delhi-ncr-cross-culture-wedding-4685",
+      "text": "Aditi and Jan-Philipp Wagner (Delhi NCR)"
+    },
+    {
+      "url": "/real_wedding/detail/debosmita-and-sumeet-visakhapatnam-vizag--bengali-wedding-4684",
+      "text": "Debosmita and Sumeet (Visakhapatnam (Vizag))"
+    },
+    {
+      "url": "/blog/category/bridal-makeup-beauty/",
+      "text": "Bridal Makeup"
+    },
+    {
+      "url": "/blog/category/honeymoons/",
+      "text": "Honeymoon Travel"
+    },
+    {
+      "url": "/blog/category/wedding-songs/",
+      "text": "Wedding Songs and Videos"
+    },
+    {
+      "url": "/blog/category/bridal-hairstyles-2/",
+      "text": "Bridal Hairstyles"
+    },
+    {
+      "url": "/blog/category/indian-wedding-decor/",
+      "text": "Wedding Decor Ideas"
+    },
+    {
+      "url": "/blog/category/bridal-style-advice/",
+      "text": "Bridal Style Advice"
+    },
+    {
+      "url": "/blog/category/indian-wedding-favours/",
+      "text": "Wedding Gifts and Favors"
+    },
+    {
+      "url": "/blog/category/budget-weddings/",
+      "text": "Budget Weddings"
+    },
+    {
+      "url": "/blog/",
+      "text": "More"
+    },
+    {
+      "url": "https://www.southindianwedding.com/",
+      "text": "South Indian wedding"
+    },
+    {
+      "url": "/blog/category/real-brides-reveal/",
+      "text": "Real Brides Reveal"
+    },
+    {
+      "url": "/blog/category/bridal-buys/",
+      "text": "Bridal Buys"
+    },
+    {
+      "url": "/blog/category/real-wedding-2/",
+      "text": "Real Wedding"
+    },
+    {
+      "url": "/blog/category/mehendi-ideas/",
+      "text": "Mehendi Ideas"
+    },
+    {
+      "url": "/blog/category/indian-wedding-ideas/",
+      "text": "Indian Wedding Ideas"
+    },
+    {
+      "url": "/blog/50-of-the-best-bollywood-wedding-songs/",
+      "text": "Wedding Songs"
+    },
+    {
+      "url": "/blog/the-best-indian-bridal-entry-songs-that-create-an-impact/",
+      "text": "Best Bridal Entry Songs"
+    },
+    {
+      "url": "/blog/where-to-buy-bridal-lehengas-in-chandni-chowk-with-pics/",
+      "text": "Chandni Chowk Lehengas"
+    },
+    {
+      "url": "/blog/best-bridal-hairstyles-indian-weddings/",
+      "text": "Best Bridal Hairstyles"
+    },
+    {
+      "url": "/blog/best-mehndi-designs/",
+      "text": "Bridal Mehendi Designs"
+    },
+    {
+      "url": "/blog/30-most-awesome-groom-entry-songs-ever/",
+      "text": "Best Groom Entry Songs"
+    },
+    {
+      "url": "/blog/wittiest-wedding-hashtags-we-have-come-across/",
+      "text": "Wittiest Wedding Hashtags"
+    },
+    {
+      "url": "/blog/best-marriage-dates-in-2025-auspicious-hindu-wedding-dates/",
+      "text": "2025 Marriage Dates"
+    },
+    {
+      "url": "/blog/30-sabyasachi-lehengas-we-spotted-on-real-brides/",
+      "text": "Latest Sabyasachi Lehengas"
+    },
+    {
+      "url": "/blog/latest-bridal-blouse-designs/",
+      "text": "Bridal Blouse Designs"
+    },
+    {
+      "url": "/blog/best-mehndi-designs/",
+      "text": "Bridal Mehendi Designs"
+    },
+    {
+      "url": "/blog/10-of-the-prettiest-honeymoon-hotels-we-found-on-instagram-including-an-indian-one/",
+      "text": "Honeymoon Hotels"
+    },
+    {
+      "url": "/shop/bridal-wear",
+      "text": "Bridal Wear"
+    },
+    {
+      "url": "/shop/bridal-lehenga-bw",
+      "text": "Bridal Lehenga"
+    },
+    {
+      "url": "/shop/lehenga-bw",
+      "text": "Lehenga"
+    },
+    {
+      "url": "/shop/sarees-bw",
+      "text": "Sarees"
+    },
+    {
+      "url": "/shop/gowns-bw",
+      "text": "Gowns"
+    },
+    {
+      "url": "/shop/sharara-bw",
+      "text": "Sharara"
+    },
+    {
+      "url": "/shop/anarkali-bw",
+      "text": "Anarkali"
+    },
+    {
+      "url": "/shop/drape-sarees-bw",
+      "text": "Drape Sarees"
+    },
+    {
+      "url": "/shop/indo-western-bw",
+      "text": "Indo Western"
+    },
+    {
+      "url": "/shop/bridal-wear",
+      "text": "View More"
+    },
+    {
+      "url": "/shop/bridal-wear",
+      "text": "Bridal Wear"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Engagement",
+      "text": "Engagement"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Haldi",
+      "text": "Haldi"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Mehendi",
+      "text": "Mehendi"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Cocktail",
+      "text": "Cocktail"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Wedding",
+      "text": "Wedding"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Reception",
+      "text": "Reception"
+    },
+    {
+      "url": "/shop/bridal-wear?Occasion=Sangeet",
+      "text": "Sangeet"
+    },
+    {
+      "url": "/shop/bridal-wear",
+      "text": "Bridal Wear"
+    },
+    {
+      "url": "/shop/engagement-lehenga-bw",
+      "text": "Engagement lehenga"
+    },
+    {
+      "url": "/shop/cocktail-gowns-bw",
+      "text": "Cocktail Gowns"
+    },
+    {
+      "url": "/shop/reception-lehenga-bw",
+      "text": "Reception Lehenga"
+    },
+    {
+      "url": "/shop/sarees-bw",
+      "text": "Wedding Sarees"
+    },
+    {
+      "url": "/shop/lehenga-drape-sarees-bw",
+      "text": "Lehenga Drape Sarees"
+    },
+    {
+      "url": "/shop/silk-sarees-bw",
+      "text": "Silk Sarees"
+    },
+    {
+      "url": "/shop/banarasi-lehenga-bw",
+      "text": "Banarasi Lehenga"
+    },
+    {
+      "url": "/shop/red-bridal-lehenga-bw",
+      "text": "Red Bridal Lehenga"
+    },
+    {
+      "url": "/shop/bridal-wear",
+      "text": "View More"
+    },
+    {
+      "url": "/wedding-invitations/wedding-card-designs",
+      "text": "Wedding Card Designs"
+    },
+    {
+      "url": "/wedding-invitations/video-templates",
+      "text": "Invitation Video Templates"
+    },
+    {
+      "url": "/wedding-invitations/save-the-date-templates",
+      "text": "Save the Date Templates"
+    }
+  ]
+}
