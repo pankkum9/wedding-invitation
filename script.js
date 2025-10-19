@@ -119,33 +119,50 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Replace with your deployed Google Apps Script URL
+            // CORS-free form submission method
             const scriptUrl = 'https://script.google.com/macros/s/AKfycbzIPW-yluPRH5bj4MeDXdAAU4TiQk70gjw_HcZagmKm0XYOldQ-Rz_e6G9mNhx6dtNw/exec';
             
-            fetch(scriptUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.success) {
-                    showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
-                    this.reset();
-                } else {
-                    showNotification(result.message || 'Error submitting RSVP. Please try again.', 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showNotification('Network error. Please check your connection and try again.', 'error');
-            })
-            .finally(() => {
+            // Create hidden iframe for response
+            const iframe = document.createElement('iframe');
+            iframe.name = 'hidden_iframe';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            
+            // Create form for submission
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = scriptUrl;
+            form.target = 'hidden_iframe';
+            form.style.display = 'none';
+            
+            // Add form fields
+            Object.keys(data).forEach(key => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = data[key] || '';
+                form.appendChild(input);
+            });
+            
+            // Add form to page and submit
+            document.body.appendChild(form);
+            form.submit();
+            
+            // Show success message and cleanup
+            setTimeout(() => {
+                showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
+                this.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            });
+                
+                // Cleanup
+                if (form.parentNode) {
+                    document.body.removeChild(form);
+                }
+                if (iframe.parentNode) {
+                    document.body.removeChild(iframe);
+                }
+            }, 2000);
         });
     }
 
