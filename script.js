@@ -113,19 +113,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Simulate form submission
+            // Submit to Google Apps Script
             const submitBtn = this.querySelector('.rsvp-btn');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Simulate API call
-            setTimeout(() => {
-                showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
-                this.reset();
+            // Replace with your deployed Google Apps Script URL
+            const scriptUrl = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+            
+            fetch(scriptUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
+                    this.reset();
+                } else {
+                    showNotification(result.message || 'Error submitting RSVP. Please try again.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Network error. Please check your connection and try again.', 'error');
+            })
+            .finally(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 2000);
+            });
         });
     }
 

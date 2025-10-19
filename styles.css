@@ -442,6 +442,17 @@ h1, h2, h3, h4, h5, h6 {
     width: 20px;
 }
 
+.venue-link {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.venue-link:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
 /* Gallery Section */
 .gallery-section {
     padding: 100px 0;
