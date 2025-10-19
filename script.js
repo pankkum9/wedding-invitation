@@ -83,86 +83,41 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(storyTimeline);
     }
 
-    // RSVP Form Handling
-    const rsvpForm = document.getElementById('rsvpForm');
+    // RSVP Form Handling (Netlify Forms)
+    const rsvpForm = document.querySelector('form[name="rsvp"]');
     if (rsvpForm) {
         rsvpForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Let Netlify handle the form submission
+            // Just show a loading state
+            const submitBtn = this.querySelector('.rsvp-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
-            // Get form data
+            // Basic validation before submission
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Basic validation
             if (!data.name || !data.email || !data.phone || !data.attendance) {
+                e.preventDefault();
                 showNotification('Please fill in all required fields.', 'error');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
                 return;
             }
 
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
+                e.preventDefault();
                 showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-
-            // Phone validation (basic)
-            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-            if (!phoneRegex.test(data.phone)) {
-                showNotification('Please enter a valid phone number.', 'error');
-                return;
-            }
-
-            // Submit to Google Apps Script
-            const submitBtn = this.querySelector('.rsvp-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            // CORS-free form submission method
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbzIPW-yluPRH5bj4MeDXdAAU4TiQk70gjw_HcZagmKm0XYOldQ-Rz_e6G9mNhx6dtNw/exec';
-            
-            // Create hidden iframe for response
-            const iframe = document.createElement('iframe');
-            iframe.name = 'hidden_iframe';
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            
-            // Create form for submission
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = scriptUrl;
-            form.target = 'hidden_iframe';
-            form.style.display = 'none';
-            
-            // Add form fields
-            Object.keys(data).forEach(key => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = data[key] || '';
-                form.appendChild(input);
-            });
-            
-            // Add form to page and submit
-            document.body.appendChild(form);
-            form.submit();
-            
-            // Show success message and cleanup
-            setTimeout(() => {
-                showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
-                this.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                
-                // Cleanup
-                if (form.parentNode) {
-                    document.body.removeChild(form);
-                }
-                if (iframe.parentNode) {
-                    document.body.removeChild(iframe);
-                }
-            }, 2000);
+                return;
+            }
+            
+            // If validation passes, let Netlify handle the submission
+            // The form will redirect to a success page or show Netlify's default message
         });
     }
 
