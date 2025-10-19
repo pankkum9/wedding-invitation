@@ -1,0 +1,23 @@
+# Files to exclude from deployment
+.DS_Store
+*.log
+node_modules/
+.env
+
+# Development files (don't deploy these)
+google-apps-script.js
+RSVP-SETUP-INSTRUCTIONS.md
+deploy-instructions.md
+data/
+raw_page.html
+enhanced_raw_page.html
+summary.txt
+enhanced_summary.txt
+all_text_content.txt
+
+# Keep only these files for deployment:
+# index.html
+# styles.css
+# script.js
+# images/
+# README.md

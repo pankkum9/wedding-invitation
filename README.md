@@ -1,25 +1,58 @@
-# Wedding Invitation Scrape Results
+# 💍 Pankaj & Sima Wedding Website
 
-## Overview
-This directory contains all scraped data from the WedMeGood wedding invitation page:
-**URL:** https://www.wedmegood.com/invite/gv/S-P/2153071
+A beautiful, responsive wedding invitation website for Pankaj & Sima's wedding celebration.
 
-## Directory Structure
+## 🎉 Wedding Details
+
+- **Couple:** Pankaj & Sima
+- **Wedding Date:** November 29, 2025
+- **Location:** Patna, Bihar
+
+## 🎊 Events
+
+1. **Tilak Ceremony** - November 25, 2025 at New Tarachak, Danapur, Patna
+2. **Haldi Ceremony** - November 28, 2025 at New Tarachak, Danapur, Patna
+3. **Wedding Ceremony** - November 29, 2025 at Samasthu Sthan Bihar, Patna
+
+## ✨ Features
+
+- 📱 **Responsive Design** - Works on all devices
+- 🎨 **Beautiful Floral Theme** - Elegant wedding aesthetics
+- 📋 **RSVP Form** - Integrated with Google Sheets
+- 📧 **Email Notifications** - Automatic notifications for RSVPs
+- 📸 **Photo Gallery** - Interactive image gallery
+- 🗺️ **Google Maps Integration** - Direct links to venues
+- 💌 **Contact Information** - Easy access to organizers
+
+## 🚀 Live Website
+
+Visit the wedding website: [Your Website URL Here]
+
+## 📞 RSVP Contacts
+
+- **SP Yadav:** 9520199288
+- **Pankaj Kumar:** 8892257020
+- **Vishal Kumar:** 6363763061
+
+## 🛠️ Technical Details
+
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** Google Apps Script
+- **Database:** Google Sheets
+- **Hosting:** GitHub Pages / Netlify
+- **Notifications:** Email via Gmail API
+
+## 📁 Project Structure
 
 ```
-wedding_invitation_scrape/
-├── README.md                    # This file
-├── raw_page.html               # Original HTML content
-├── enhanced_raw_page.html      # Enhanced HTML content
-├── summary.txt                 # Basic scrape summary
-├── enhanced_summary.txt        # Detailed scrape summary
-├── data/                       # Structured data files
-│   ├── content.json           # All text content extracted
-│   ├── images.json            # Image metadata
-│   ├── metadata.json          # Page metadata
-│   ├── wedding_details.json   # Wedding-specific extracted data
-│   └── enhanced_images.json   # Enhanced image metadata
-└── images/                     # Downloaded images
-    ├── [15 wedding-related images]
-    └── [Various formats: JPG, PNG, SVG]
+wedding_invitation/
+├── index.html          # Main website file
+├── styles.css          # Styling and design
+├── script.js           # Interactive functionality
+├── images/             # Wedding photos and assets
+└── README.md           # This file
 ```
+
+---
+
+**Made with ❤️ for Pankaj & Sima's Special Day**
