@@ -1,6 +1,6 @@
 # RSVP Backend Setup Instructions
 
-## 🚀 Complete Setup Guide for Google Sheets + WhatsApp Integration
+## 🚀 Complete Setup Guide for Google Sheets + Email Notifications
 
 ### **Step 1: Create Google Spreadsheet**
 
@@ -17,10 +17,8 @@
 2. Click "New Project"
 3. Delete the default code and paste the content from `google-apps-script.js`
 4. **Replace these placeholders:**
-   - `YOUR_SPREADSHEET_ID` → Your Google Sheets ID from Step 1
-   - `YOUR_WHATSAPP_NUMBER` → Your WhatsApp number (with country code, no +)
-   - `YOUR_PHONE_NUMBER_ID` → WhatsApp Business Phone Number ID
-   - `YOUR_ACCESS_TOKEN` → WhatsApp Business API Access Token
+   - `YOUR_SPREADSHEET_ID` → Your Google Sheets ID from Step 1 (✅ Already done: `1YJpRPGuhG2ssz3WQvYOmMkgx0rZWwfzTyMuZA6swvss`)
+   - `your-email@gmail.com` → Your actual email address where you want to receive RSVP notifications
 
 5. **Deploy as Web App:**
    - Click "Deploy" → "New Deployment"
@@ -35,30 +33,32 @@
 1. Open `script.js`
 2. Replace `YOUR_GOOGLE_APPS_SCRIPT_URL` with the Web App URL from Step 2
 
-### **Step 4: WhatsApp Business API Setup**
+### **Step 4: Email Configuration (Already Done!)**
 
-#### **Option A: WhatsApp Business API (Advanced)**
-1. Go to [Facebook Developers](https://developers.facebook.com)
-2. Create a new app
-3. Add WhatsApp Business API
-4. Get Phone Number ID and Access Token
-5. Update the Google Apps Script with these values
+#### **📧 Email Notifications Setup**
 
-#### **Option B: Simple Email Notifications (Easier)**
-If WhatsApp setup is complex, you can use email notifications instead:
+✅ **Already Configured!** The system is now set to send beautiful HTML email notifications.
 
-1. In `google-apps-script.js`, replace the `sendWhatsAppNotification(data);` line with:
-   ```javascript
-   sendEmailNotification(data);
-   ```
-2. Update the email address in the `sendEmailNotification` function
+**What you'll receive:**
+- 🎉 **Instant email notifications** for each RSVP submission
+- 📊 **Formatted HTML emails** with all guest details
+- 🎨 **Beautiful design** matching your wedding theme
+- 📅 **Indian timezone** timestamps
+- 💬 **Special messages** from guests highlighted
+
+**Email Features:**
+- ✅ **HTML formatted** with colors and styling
+- ✅ **Plain text fallback** for all email clients
+- ✅ **Professional sender name** ("Pankaj & Sima Wedding RSVP")
+- ✅ **Clear subject lines** with guest names
+- ✅ **Attendance status** color-coded (Green = Yes, Red = No)
 
 ### **Step 5: Test the Setup**
 
 1. Open your website
 2. Fill out the RSVP form
 3. Check your Google Sheets for the new entry
-4. Check WhatsApp/Email for notification
+4. Check your email for the notification
 
 ## 🔧 **Alternative: Zapier Integration (No Coding)**
 
@@ -70,12 +70,14 @@ If the above seems complex, you can use Zapier:
    - Action: Send WhatsApp message (via ClickSend or similar)
 3. **Embed Google Form** in your website
 
-## 📱 **WhatsApp Integration Services**
+## 📱 **Why Arattai.in?**
 
-- **Twilio WhatsApp API** (easiest)
-- **ClickSend WhatsApp**
-- **MessageBird WhatsApp**
-- **WhatsApp Business API** (most features)
+- ✅ **Simple Setup** - No complex Facebook Developer setup
+- ✅ **Direct WhatsApp Integration** - Send messages directly
+- ✅ **Affordable Pricing** - Cost-effective for small businesses
+- ✅ **Indian Service** - Better support for Indian numbers
+- ✅ **Template Support** - Pre-approved message templates
+- ✅ **Bulk Messaging** - Send to multiple recipients
 
 ## 🆘 **Need Help?**
 
@@ -87,10 +89,11 @@ If you need assistance with any step, I can:
 ## 📊 **What You'll Get**
 
 ✅ **Google Sheets Database** with all RSVP responses
-✅ **Instant WhatsApp notifications** for each submission  
+✅ **Instant Email notifications** with beautiful HTML formatting  
 ✅ **Beautiful form design** (unchanged)
 ✅ **Automatic data organization**
 ✅ **Real-time updates**
+✅ **No external API costs** - completely free!
 
 ## 🔒 **Security Notes**
 

@@ -7,7 +7,7 @@ function doPost(e) {
     const data = JSON.parse(e.postData.contents);
     
     // Get or create the spreadsheet
-    const spreadsheetId = 'YOUR_SPREADSHEET_ID'; // Replace with your Google Sheets ID
+    const spreadsheetId = '1YJpRPGuhG2ssz3WQvYOmMkgx0rZWwfzTyMuZA6swvss'; // Replace with your Google Sheets ID
     const sheet = SpreadsheetApp.openById(spreadsheetId).getActiveSheet();
     
     // Ensure headers exist
@@ -31,8 +31,8 @@ function doPost(e) {
     
     sheet.appendRow(newRow);
     
-    // Send WhatsApp notification
-    sendWhatsAppNotification(data);
+    // Send Email notification
+    sendEmailNotification(data);
     
     // Return success response
     return ContentService
@@ -54,13 +54,13 @@ function doPost(e) {
   }
 }
 
-function sendWhatsAppNotification(data) {
+function sendArattaiNotification(data) {
   try {
-    // WhatsApp Business API configuration
-    const whatsappConfig = {
-      phoneNumberId: 'YOUR_PHONE_NUMBER_ID', // Replace with your WhatsApp Business Phone Number ID
-      accessToken: 'YOUR_ACCESS_TOKEN', // Replace with your WhatsApp Business API token
-      recipientNumber: 'YOUR_WHATSAPP_NUMBER' // Replace with your WhatsApp number (with country code, no +)
+    // Arattai.in API configuration
+    const arattaiConfig = {
+      apiKey: 'YOUR_ARATTAI_API_KEY', // Replace with your Arattai API key
+      recipientNumber: 'YOUR_WHATSAPP_NUMBER', // Replace with your WhatsApp number (with country code, no +)
+      templateId: 'YOUR_TEMPLATE_ID' // Optional: Replace with your template ID if using templates
     };
     
     // Format the message
@@ -73,56 +73,101 @@ function sendWhatsAppNotification(data) {
                    `💬 *Message:* ${data.message || 'No message'}\n\n` +
                    `📅 *Submitted:* ${new Date().toLocaleString()}`;
     
-    // WhatsApp API endpoint
-    const url = `https://graph.facebook.com/v18.0/${whatsappConfig.phoneNumberId}/messages`;
+    // Arattai API endpoint
+    const url = 'https://api.arattai.in/api/v1/send-message';
     
     // Prepare the payload
     const payload = {
-      messaging_product: 'whatsapp',
-      to: whatsappConfig.recipientNumber,
-      type: 'text',
-      text: {
-        body: message
-      }
+      api_key: arattaiConfig.apiKey,
+      to: arattaiConfig.recipientNumber,
+      message: message,
+      type: 'text'
     };
     
     // Send the message
     const options = {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${whatsappConfig.accessToken}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       payload: JSON.stringify(payload)
     };
     
     const response = UrlFetchApp.fetch(url, options);
-    console.log('WhatsApp notification sent:', response.getContentText());
+    const responseData = JSON.parse(response.getContentText());
+    
+    if (responseData.success) {
+      console.log('Arattai notification sent successfully:', responseData);
+    } else {
+      console.error('Arattai notification failed:', responseData);
+    }
     
   } catch (error) {
-    console.error('Error sending WhatsApp notification:', error);
+    console.error('Error sending Arattai notification:', error);
     // Don't throw error here to avoid breaking the main flow
   }
 }
 
-// Alternative: Simple email notification (if WhatsApp setup is complex)
+// Email notification for RSVP submissions
 function sendEmailNotification(data) {
   try {
-    const subject = `New RSVP: ${data.name}`;
-    const body = `New RSVP Received!\n\n` +
-                 `Name: ${data.name}\n` +
-                 `Email: ${data.email}\n` +
-                 `Phone: ${data.phone}\n` +
-                 `Attendance: ${data.attendance === 'yes' ? 'Will Attend' : 'Cannot Attend'}\n` +
-                 `Guests: ${data.guests || 'Not specified'}\n` +
-                 `Message: ${data.message || 'No message'}\n\n` +
-                 `Submitted: ${new Date().toLocaleString()}`;
+    const subject = `🎉 New Wedding RSVP: ${data.name}`;
     
-    // Replace with your email
-    GmailApp.sendEmail('your-email@gmail.com', subject, body);
+    // Create a nicely formatted HTML email
+    const htmlBody = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #faf8f5;">
+        <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h2 style="color: #d4a574; text-align: center; margin-bottom: 30px;">🎉 New RSVP Received!</h2>
+          
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h3 style="color: #2c2c2c; margin-top: 0;">Guest Details:</h3>
+            <p><strong>👤 Name:</strong> ${data.name}</p>
+            <p><strong>📧 Email:</strong> ${data.email}</p>
+            <p><strong>📱 Phone:</strong> ${data.phone}</p>
+            <p><strong>✅ Attendance:</strong> <span style="color: ${data.attendance === 'yes' ? '#4CAF50' : '#f44336'}; font-weight: bold;">${data.attendance === 'yes' ? 'Will Attend ✅' : 'Cannot Attend ❌'}</span></p>
+            <p><strong>👥 Number of Guests:</strong> ${data.guests || 'Not specified'}</p>
+          </div>
+          
+          ${data.message ? `
+          <div style="background: #e8f5e8; padding: 15px; border-radius: 8px; border-left: 4px solid #4CAF50;">
+            <h4 style="color: #2c2c2c; margin-top: 0;">💬 Special Message:</h4>
+            <p style="font-style: italic; color: #555;">"${data.message}"</p>
+          </div>
+          ` : ''}
+          
+          <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+            <p style="color: #666; font-size: 14px;">📅 Submitted on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
+            <p style="color: #d4a574; font-weight: bold;">Pankaj & Sima Wedding</p>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Plain text version for email clients that don't support HTML
+    const textBody = `New RSVP Received for Pankaj & Sima Wedding!\n\n` +
+                     `👤 Name: ${data.name}\n` +
+                     `📧 Email: ${data.email}\n` +
+                     `📱 Phone: ${data.phone}\n` +
+                     `✅ Attendance: ${data.attendance === 'yes' ? 'Will Attend' : 'Cannot Attend'}\n` +
+                     `👥 Guests: ${data.guests || 'Not specified'}\n` +
+                     `💬 Message: ${data.message || 'No special message'}\n\n` +
+                     `📅 Submitted: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`;
+    
+    // Replace with your email address
+    const recipientEmail = 'pankkum9@zohomail.in'; // UPDATE THIS WITH YOUR EMAIL
+    
+    // Send the email
+    GmailApp.sendEmail(recipientEmail, subject, textBody, {
+      htmlBody: htmlBody,
+      name: 'Pankaj & Sima Wedding RSVP'
+    });
+    
+    console.log('Email notification sent successfully to:', recipientEmail);
     
   } catch (error) {
     console.error('Error sending email notification:', error);
+    // Don't throw error to avoid breaking the main flow
   }
 }
 
@@ -138,5 +183,5 @@ function testFunction() {
   };
   
   console.log('Testing with data:', testData);
-  sendWhatsAppNotification(testData);
+  sendEmailNotification(testData);
 }
