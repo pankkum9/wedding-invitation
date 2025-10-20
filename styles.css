@@ -593,6 +593,44 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     transition: border-color 0.3s ease;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23d4a574" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 3rem;
+}
+
+.form-group select option {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group select option:hover,
+.form-group select option:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
+.form-group select option:checked {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 1rem;
 }
 
 .form-group input:focus,
@@ -600,6 +638,12 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.form-group select:hover {
+    border-color: var(--gold);
+    transition: all 0.3s ease;
 }
 
 .rsvp-btn {
