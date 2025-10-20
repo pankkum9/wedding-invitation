@@ -83,29 +83,22 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(storyTimeline);
     }
 
-    // RSVP Form Handling (Formspree)
+    // RSVP Form Handling (Google Forms Integration)
     const rsvpForm = document.querySelector('.rsvp-form');
     if (rsvpForm) {
         rsvpForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             const submitBtn = this.querySelector('.rsvp-btn');
-            const originalText = submitBtn.textContent;
+            const originalText = submitBtn.innerHTML;
             
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
             // Basic validation
-            if (!data.name || !data.email || !data.phone || !data.attendance) {
+            if (!data.name || !data.phone || !data.attendance) {
                 showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
                 return;
             }
 
@@ -117,33 +110,101 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Show loading state
-            submitBtn.textContent = 'Sending...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Submit to Formspree
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
+            // Submit to Google Forms
+            submitToGoogleForm(data)
+                .then(() => {
                     showNotification('Thank you for your RSVP! We\'ll be in touch soon.', 'success');
                     this.reset();
-                } else {
-                    throw new Error('Form submission failed');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showNotification('Error submitting RSVP. Please try again or contact us directly.', 'error');
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+
+    // Google Forms submission function
+    function submitToGoogleForm(data) {
+        return new Promise((resolve, reject) => {
+            // Your Google Form URL (converted to submission format)
+            const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScqSiiztU3o0vFpqcU4SALvgA93QRVA_5z4ubUbXy1S6uluZQ/formResponse';
+            
+            // Google Form field mappings (you'll need to inspect your form to get these)
+            // To get these field names:
+            // 1. Open your Google Form
+            // 2. Right-click and "View Page Source"
+            // 3. Search for "entry." to find field names
+            const formData = new FormData();
+            
+            // Map your form fields to Google Form entry IDs
+            // Note: You need to replace these with actual entry IDs from your Google Form
+            formData.append('entry.XXXXXXXXX', data.name);        // Replace with actual entry ID for name
+            formData.append('entry.XXXXXXXXX', data.phone);       // Replace with actual entry ID for phone
+            formData.append('entry.XXXXXXXXX', data.attendance);  // Replace with actual entry ID for attendance
+            formData.append('entry.XXXXXXXXX', data.guests || 'Just me'); // Replace with actual entry ID for guests
+            formData.append('entry.XXXXXXXXX', data.message || ''); // Replace with actual entry ID for message
+
+            // Create a hidden iframe to submit the form
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.name = 'google-form-iframe';
+            document.body.appendChild(iframe);
+
+            // Create a temporary form to submit to Google
+            const tempForm = document.createElement('form');
+            tempForm.method = 'POST';
+            tempForm.action = GOOGLE_FORM_URL;
+            tempForm.target = 'google-form-iframe';
+            tempForm.style.display = 'none';
+
+            // Add all form data as hidden inputs
+            for (let [key, value] of formData.entries()) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                tempForm.appendChild(input);
+            }
+
+            document.body.appendChild(tempForm);
+
+            // Handle iframe load (success/error)
+            iframe.onload = function() {
+                // Clean up
+                document.body.removeChild(tempForm);
+                document.body.removeChild(iframe);
+                
+                // Assume success since Google Forms doesn't return detailed error info
+                resolve();
+            };
+
+            iframe.onerror = function() {
+                // Clean up
+                document.body.removeChild(tempForm);
+                document.body.removeChild(iframe);
+                reject(new Error('Failed to submit to Google Forms'));
+            };
+
+            // Submit the form
+            tempForm.submit();
+
+            // Fallback timeout
+            setTimeout(() => {
+                if (document.body.contains(tempForm)) {
+                    document.body.removeChild(tempForm);
                 }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showNotification('Error submitting RSVP. Please try again.', 'error');
-            })
-            .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
+                if (document.body.contains(iframe)) {
+                    document.body.removeChild(iframe);
+                }
+                resolve(); // Assume success after timeout
+            }, 5000);
         });
     }
 
