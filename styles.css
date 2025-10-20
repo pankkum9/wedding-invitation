@@ -546,6 +546,14 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto 1rem;
     color: var(--white);
     font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.contact-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .contact-card h4 {
